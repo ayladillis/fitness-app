@@ -1,6 +1,6 @@
-const app = require("express").Router();
+// const app = require("express").Router();
 const workOutModel = require("../models/workout.js");
-const { db } = require("../models/workout");
+// const { db } = require("../models/workout");
 
 module.exports = function(app) {
 
@@ -38,30 +38,37 @@ module.exports = function(app) {
 // creating a workout, post route
 
     app.post("/api/workouts", (req, res) => {
+        workOutModel.create(req.body)
+        .then(function(workout){
+            res.send(workout)
+        })
+        .catch(function(err){
+            if(err)throw err
+        });
 
     });
 
 // get route, similar to one we created, finding first 7 workouts
 
-    app.get("/api/workouts/range", (req, res) => {
-        workout.find({}, function (err, doc) {
+    // app.get("/api/workouts/range", (req, res) => {
+    //     workOutModel.find({}.limit(7)
+    //     .then(function(workout){
 
+    //     })
+            
+    // });
+
+    app.get("/api/workouts/range", function(req, res){
+        workOutModel.find({}).limit(7)
+        .then(function(workout){
+            console.log("get", workout)
+            res.send(workout)
         })
+        .catch(function(err){
+            if(err)throw err
+        });
     });
 
 }
-
-
-
-// app.get("/api/workouts", (req, res) => {
-//     workOutModel.find({})
-//     .then(function(workout){
-//         console.log("get", workout)
-//         res.send(workout)
-//     })
-//     .catch(function(err){
-//         if(err)throw err
-//     });
-// });
 
 
