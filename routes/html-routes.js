@@ -1,4 +1,4 @@
-
+var app = require("express").Router()
 var path = require("path");
 
 module.export = function(app) {
