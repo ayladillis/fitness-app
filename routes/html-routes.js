@@ -1,7 +1,7 @@
-var app = require("express").Router()
 var path = require("path");
 
-module.export = function(app) {
+
+module.exports = function(app) {
 
     app.get("/exercise", function(req, res){
         res.sendFile(path.join(_dirname, "../public/exercise.html"));
