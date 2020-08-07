@@ -4,6 +4,8 @@ const workOutModel = require("../models/workout.js");
 
 module.exports = function(app) {
 
+// get route
+
     app.get("/api/workouts", (req, res) => {
         workOutModel.find({}, function (err, doc) {
             if (err) {
@@ -14,15 +16,19 @@ module.exports = function(app) {
         });
     });
 
-// put route, updating a workout
-
-    // app.put("/api/workouts/:id", (req, res) => {
-    //     workout.update(
-    //         {where: req.body}
-    //             ).then(function(dbworkout){
-    //                 res.json(dbworkout);
-    //             });
+    // app.get("/api/workouts", (req, res) => {
+    //     workOutModel.find({})
+    //         .then(function(workout){
+    //             console.log("get", workout)
+    //             res.send(workout)
+    //         })
+    //         .catch(function(err){
+    //             if(err)throw err
+    //         });
     // });
+
+
+// put route, updating a workout
 
     app.put("/api/workouts/:id", (req, res) => {
     workOutModel.findByIdAndUpdate(req.params.id, {$push: { exercises: req.body} }, {new: true})
@@ -49,14 +55,6 @@ module.exports = function(app) {
     });
 
 // get route, similar to one we created, finding first 7 workouts
-
-    // app.get("/api/workouts/range", (req, res) => {
-    //     workOutModel.find({}.limit(7)
-    //     .then(function(workout){
-
-    //     })
-            
-    // });
 
     app.get("/api/workouts/range", function(req, res){
         workOutModel.find({}).limit(7)
