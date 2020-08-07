@@ -53,6 +53,6 @@ Then open in your preferred text editor:
 ## Author
 ### [Ayla Dillis](https://github.com/ayladillis)
 - [LinkedIn](https://www.linkedin.com/in/ayladillis/)
-- [Portfolio](https://ayladillis.github.io/ayladillis_portfolio/)
+- [Portfolio](https://polar-falls-52203.herokuapp.com/)
 - [Highlighted-Work](https://ayladillis.github.io/Coding-Bootcamp-Project-1-Zillow-Maps-API-AD/)
 - email: aayladillis@gmail.com
