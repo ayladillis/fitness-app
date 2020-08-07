@@ -47,6 +47,7 @@ Then open in your preferred text editor:
 * [Mongodb](https://www.mongodb.com/)
 * [Express](https://expressjs.com/)
 * [Mongoose](https://mongoosejs.com/)
+* [Sequelize]( )
 
 
 

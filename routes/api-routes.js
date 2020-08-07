@@ -1,37 +1,47 @@
+const app = require("express").Router();
 const workOutModel = require("../models/workout");
 const { db } = require("../models/workout");
 
 module.exports = function(app) {
 
-    app.get("/api/workouts", function(req, res) {
-        //use mongoose find function 
-        workout.find({}, function (err, doc) {
-            if (err) {
-                res.status(500).send(err)
-            }else{
-                res.json(doc)
-            }
-        });
-    });
+    // app.get("/api/workouts", (req, res) => {
+    //     workout.find({}, function (err, doc) {
+    //         if (err) {
+    //             res.status(500).send(err)
+    //         }else{
+    //             res.json(doc)
+    //         }
+    //     });
+    // });
 
-    app.put("/api/workouts", function(req, res) {
-        db.workout.update(req.body,
-            {
-                where: {
-                    id: req.body.id
-                }
-            }).then(function(dbworkout){
-                res.json(dbworkout);
-            });
-    });
+    app.get("/api/workouts", function(req, res){
+        workOutModel.find({})
+        .then(function(workout){
+            console.log("get", workout)
+            res.send(workout)
+        })
+        .catch(function(err){
+            if(err)throw err
+        })
+    })
 
-    app.post("/api/workouts", function(req, res) {
-        
-    });
+    // app.put("/api/workouts", (req, res) => {
+    //     workout.update(
+    //         {where: req.body}
+    //             ).then(function(dbworkout){
+    //                 res.json(dbworkout);
+    //             });
+    // });
 
-    app.get("/api/workouts/range", function(req, res) {
+    // app.post("/api/workouts", (req, res) => {
 
-    });
+    // });
+
+    // app.get("/api/workouts/range", (req, res) => {
+    //     workout.find({}, function (err, doc) {
+
+    //     })
+    // });
 
 }
 
