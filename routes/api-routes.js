@@ -37,17 +37,17 @@ module.exports = function(app) {
 
 // creating a workout, post route
 
-    // app.post("/api/workouts", (req, res) => {
+    app.post("/api/workouts", (req, res) => {
 
-    // });
+    });
 
 // get route, similar to one we created, finding first 7 workouts
 
-    // app.get("/api/workouts/range", (req, res) => {
-    //     workout.find({}, function (err, doc) {
+    app.get("/api/workouts/range", (req, res) => {
+        workout.find({}, function (err, doc) {
 
-    //     })
-    // });
+        })
+    });
 
 }
 
