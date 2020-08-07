@@ -18,7 +18,7 @@ const exerciseSchema = new Schema({
         reps: Number,
         sets: Number,
         distance: Number
-})
+});
 
 const workOutSchema = new Schema ({
     day: {

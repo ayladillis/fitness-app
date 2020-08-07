@@ -1,6 +1,6 @@
 const app = require("express").Router();
 const workOutModel = require("../models/workout");
-const { db } = require("../models/workout");
+// const { db } = require("../models/workout");
 
 module.exports = function(app) {
 
