@@ -1,5 +1,5 @@
 # Fitness App
-This app takes in user input and calculates workout duration, pounds lifted, and exercises performed.
+This app takes in user input such as exercise type, name, sets and reps and calculates workout duration, pounds lifted, and exercises performed.
 
 ![Web Screenshot](https://media.giphy.com/media/JRrtxei81USopZrflq/giphy.gif)
 
