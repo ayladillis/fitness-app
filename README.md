@@ -1,5 +1,7 @@
 # Fitness App
-![Web Screenshot]( )
+This app takes in user input and calculates workout duration, pounds lifted, and exercises performed.
+
+![Web Screenshot](https://media.giphy.com/media/JRrtxei81USopZrflq/giphy.gif)
 
 
 ## Table of Content
@@ -32,9 +34,13 @@ Then open in your preferred text editor:
 
 ## Code Highlight
 
+Here I linked the api routes in the server.js file 
 
-![Screenshot]()
-![Screenshot]()
+![Screenshot](./images/code2.png)
+
+This code snippet showes the first get route in the routes folder, api-routes.js file that leads to the home page of the fitness app.
+
+![Screenshot](./images/code1.png)
 
 
 
